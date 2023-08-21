@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Header } from "./components/Header";
 import { NewUserForm } from "./components/NewUserForm";
 import { UserList } from "./components/UserList";
-import { AddUserFormButton } from "./components/AddUserFormButton";
+import { AddUserButton } from "./components/AddUserFormButton";
 
 /*
  * Components
@@ -278,7 +278,7 @@ export const App = () => {
       {showNewUserForm ? (
         <NewUserForm />
       ) : (
-        <AddUserFormButton setShowNewUserForm={setShowNewUserForm} />
+        <AddUserButton setShowNewUserForm={setShowNewUserForm} />
       )}
     </main>
   );

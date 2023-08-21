@@ -3,8 +3,6 @@
   background-color: #fff;
   box-shadow: 2px 4px 4px 0 rgb(0 0 0 / 40%);
   border-spacing: 0;
-
-  height: 50vh;
 }
 
 .user_list_thead {
@@ -35,7 +33,6 @@
 .user_list_chevron_up {
   width: 2rem;
   cursor: pointer;
-  /* padding: 1.5rem 2rem; */
 }
 
 .user_list_chevron_up:hover {

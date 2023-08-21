@@ -1,13 +1,11 @@
-import addUserButtonStyles from "./AddUserFormButton.module.css";
+import addUserButtonStyles from "./AddUserButton.module.css";
 import sharedStyles from "../sharedStyles.module.css";
 
-interface AddUserFormButtonProps {
+interface AddUserButtonProps {
   setShowNewUserForm: (value: boolean) => void;
 }
 
-export const AddUserFormButton = ({
-  setShowNewUserForm,
-}: AddUserFormButtonProps) => {
+export const AddUserButton = ({ setShowNewUserForm }: AddUserButtonProps) => {
   const clickHandler = () => setShowNewUserForm(true);
   return (
     <div className={sharedStyles.container_flex_end}>

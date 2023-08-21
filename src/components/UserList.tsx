@@ -10,7 +10,14 @@ interface UserListProps {
 
 export const UserList = ({ users }: UserListProps) => {
   return (
-    <div className={sharedStyles.container_centered}>
+    <div
+      className={sharedStyles.container_centered}
+      style={{
+        borderRadius: ".3rem",
+        boxShadow: ".1rem .2rem .6rem 0 rgba(0,0,0,0.3)",
+        marginBottom: "1.6rem",
+      }}
+    >
       <table className={userListStyles.user_list}>
         <TableHead />
         <TableBody users={users} />

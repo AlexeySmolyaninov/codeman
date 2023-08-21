@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "./components/Header";
 import { NewUserForm } from "./components/NewUserForm";
 import { UserList } from "./components/UserList";
+import { AddUserFormButton } from "./components/AddUserFormButton";
 
 /*
  * Components
@@ -10,9 +11,31 @@ import { UserList } from "./components/UserList";
  *  Display Form to craete new user if button "Create new User" is trigger
  */
 
-export type User = typeof usersData;
+export type User = {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;
+    };
+  };
+  phone: string;
+  website: string;
+  company: {
+    name: string;
+    catchPhrase: string;
+    bs: string;
+  };
+};
 
-const usersData = [
+const usersData: User[] = [
   {
     id: 1,
     name: "Leanne Graham",
@@ -246,12 +269,17 @@ const usersData = [
 ];
 
 export const App = () => {
-  const [showNewUserForm, setShowNewUserForm] = useState(true);
+  const [showNewUserForm, setShowNewUserForm] = useState(false);
+  // later fetch users from endpoint
   return (
-    <>
+    <main style={{ margin: "0 5rem" }}>
       <Header />
       <UserList users={usersData} setShowNewUserForm={setShowNewUserForm} />
-      {showNewUserForm && <NewUserForm />}
-    </>
+      {showNewUserForm ? (
+        <NewUserForm />
+      ) : (
+        <AddUserFormButton setShowNewUserForm={setShowNewUserForm} />
+      )}
+    </main>
   );
 };

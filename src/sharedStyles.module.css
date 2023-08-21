@@ -1,0 +1,15 @@
+.container_centered {
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+}
+
+.container_flex_end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.conatiner_flex_direction_column {
+  display: flex;
+  flex-direction: column;
+}

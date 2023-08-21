@@ -1,0 +1,12 @@
+.add_user_button {
+  width: 5.6rem;
+  display: block;
+  background-color: #2f9e44;
+  padding: 0.6rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.add_user_icon {
+  stroke: #fff;
+}

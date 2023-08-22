@@ -10,7 +10,7 @@ interface UserListProps {
 
 export const UserList = ({ users }: UserListProps) => {
   return (
-    <div
+    <section
       className={sharedStyles.container_centered}
       style={{
         borderRadius: ".3rem",
@@ -22,7 +22,7 @@ export const UserList = ({ users }: UserListProps) => {
         <TableHead />
         <TableBody users={users} />
       </table>
-    </div>
+    </section>
   );
 };
 
@@ -138,7 +138,7 @@ const UserDetails = ({
             </svg>
           </div>
           <div style={{ display: "flex", justifyContent: "space-around" }}>
-            <section className={userListStyles.user_detail_section}>
+            <div className={userListStyles.user_detail_section}>
               <h2 className={userListStyles.section_h2}>General Info</h2>
               <ul className={userListStyles.section_list}>
                 <li>Name: {user.name}</li>
@@ -146,8 +146,8 @@ const UserDetails = ({
                 <li>Email: {user.email}</li>
                 <li>Phone: {user.phone}</li>
               </ul>
-            </section>
-            <section className={userListStyles.user_detail_section}>
+            </div>
+            <div className={userListStyles.user_detail_section}>
               <h2 className={userListStyles.section_h2}>Address</h2>
               <ul className={userListStyles.section_list}>
                 <li>Street: {user.address.street}</li>
@@ -157,15 +157,15 @@ const UserDetails = ({
                 <li>Latitude: {user.address.geo.lat}</li>
                 <li>Longtitude: {user.address.geo.lng}</li>
               </ul>
-            </section>
-            <section className={userListStyles.user_detail_section}>
+            </div>
+            <div className={userListStyles.user_detail_section}>
               <h2 className={userListStyles.section_h2}>Company</h2>
               <ul className={userListStyles.section_list}>
                 <li>Name: {user.company.name}</li>
                 <li>Catch Phrase: {user.company.catchPhrase}</li>
                 <li>Bs: {user.company.bs}</li>
               </ul>
-            </section>
+            </div>
           </div>
         </div>
       </td>

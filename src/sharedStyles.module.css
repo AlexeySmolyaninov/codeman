@@ -4,6 +4,12 @@
   overflow-x: scroll;
 }
 
+.flex_align_justify_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container_flex_end {
   display: flex;
   justify-content: flex-end;

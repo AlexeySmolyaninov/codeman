@@ -4,13 +4,6 @@ import { NewUserForm } from "./components/NewUserForm";
 import { UserList } from "./components/UserList";
 import { AddUserButton } from "./components/AddUserFormButton";
 
-/*
- * Components
- *  Display Header
- *  Display UserList
- *  Display Form to craete new user if button "Create new User" is trigger
- */
-
 export type User = {
   id: number;
   name: string;
@@ -276,7 +269,7 @@ export const App = () => {
       <Header />
       <UserList users={usersData} setShowNewUserForm={setShowNewUserForm} />
       {showNewUserForm ? (
-        <NewUserForm />
+        <NewUserForm setShowNewUserForm={setShowNewUserForm} />
       ) : (
         <AddUserButton setShowNewUserForm={setShowNewUserForm} />
       )}

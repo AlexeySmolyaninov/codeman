@@ -13,7 +13,12 @@ html {
 
 h2 {
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 2.4rem;
 }
 
 ul {
@@ -34,4 +39,24 @@ td {
 
 tbody tr:hover {
   background-color: hsla(0, 0%, 0%, 0.1);
+}
+
+section {
+  border-radius: 0.3rem;
+  box-shadow: 0.1rem 0.2rem 0.6rem 0 rgba(0, 0, 0, 0.3);
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+legend {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+label {
+  font-size: 1.6rem;
 }

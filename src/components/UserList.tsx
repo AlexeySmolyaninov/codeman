@@ -85,20 +85,24 @@ const TableRow = ({ user }: TableRowProps) => {
       <td className={userListStyles.user_list_td}>{user.phone}</td>
       <td className={userListStyles.user_list_td}>{user.website}</td>
       <td className={userListStyles.user_list_td}>
-        <svg
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className={userListStyles.user_list_chevron_down_icon}
+        <button
           onClick={onChevronClickHandler}
+          className={userListStyles.button}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-          />
-        </svg>
+          <svg
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className={userListStyles.user_list_chevron_down_icon}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </button>
       </td>
     </tr>
   );
@@ -113,6 +117,7 @@ const UserDetails = ({
   user,
   setShowExpandedUserInformation,
 }: UserDaitlsProps) => {
+  const closeDropDownHandler = () => setShowExpandedUserInformation(false);
   return (
     <tr>
       <td
@@ -122,20 +127,23 @@ const UserDetails = ({
       >
         <div className={sharedStyles.conatiner_flex_direction_column}>
           <div style={{ alignSelf: "end", paddingRight: "2rem" }}>
-            <svg
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={1.5}
-              onClick={() => setShowExpandedUserInformation(false)}
-              className={userListStyles.user_list_chevron_up}
+            <button
+              onClick={closeDropDownHandler}
+              className={`${userListStyles.button} ${userListStyles.user_list_chevron_up}`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 15.75l7.5-7.5 7.5 7.5"
-              />
-            </svg>
+              <svg
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                />
+              </svg>
+            </button>
           </div>
           <div style={{ display: "flex", justifyContent: "space-around" }}>
             <div className={userListStyles.user_detail_section}>

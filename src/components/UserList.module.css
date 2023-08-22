@@ -55,3 +55,12 @@
 .section_h2 {
   margin-bottom: 1.2rem;
 }
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}

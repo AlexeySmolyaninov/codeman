@@ -49,13 +49,15 @@ export const NewUserForm = ({ setShowNewUserForm }: NewUserFormProps) => {
           <input type="text" id="city" placeholder="City" required />
 
           <input type="text" id="zipcode" placeholder="Zipcode" required />
-          <div>
-            <label htmlFor="lat">Latitude</label>
-            <input type="number" id="lat" required />
-          </div>
-          <div>
-            <label htmlFor="lng">Longtitude</label>
-            <input type="number" id="lng" required />
+          <div className={newUserFormStyles.lat_lng_group}>
+            <div className={sharedStyles.conatiner_flex_direction_column}>
+              <label htmlFor="lat">Latitude</label>
+              <input type="number" id="lat" required />
+            </div>
+            <div className={sharedStyles.conatiner_flex_direction_column}>
+              <label htmlFor="lng">Longtitude</label>
+              <input type="number" id="lng" required />
+            </div>
           </div>
         </fieldset>
         <fieldset className={newUserFormStyles.fieldset}>

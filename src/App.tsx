@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { Header } from "./components/Header";
 import { NewUserForm } from "./components/NewUserForm";
 import { UserList } from "./components/UserList";
 import { AddUserButton } from "./components/AddUserFormButton";
+import { userReducer } from "./reducers/userList";
 
 export type User = {
   id: number;
@@ -263,11 +264,11 @@ const usersData: User[] = [
 
 export const App = () => {
   const [showNewUserForm, setShowNewUserForm] = useState(false);
-  // later fetch users from endpoint
+  const [users] = useReducer(userReducer, usersData);
   return (
     <main style={{ margin: "0 5rem" }}>
       <Header />
-      <UserList users={usersData} setShowNewUserForm={setShowNewUserForm} />
+      <UserList users={users} setShowNewUserForm={setShowNewUserForm} />
       {showNewUserForm ? (
         <NewUserForm setShowNewUserForm={setShowNewUserForm} />
       ) : (

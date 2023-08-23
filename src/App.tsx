@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 import { Header } from "./components/Header";
 import { NewUserForm } from "./components/NewUserForm";
-import { UserList } from "./components/UserList";
+import { UserList } from "./components/userList/UserList";
 import { AddUserButton } from "./components/AddUserFormButton";
 import { userReducer } from "./reducers/userList";
 
@@ -264,11 +264,23 @@ const usersData: User[] = [
 
 export const App = () => {
   const [showNewUserForm, setShowNewUserForm] = useState(false);
-  const [users] = useReducer(userReducer, usersData);
+  const [users, dispatch] = useReducer(userReducer, usersData);
+
+  const handleUserDeletion = (id: number) => {
+    dispatch({
+      type: "DELETE",
+      data: { id },
+    });
+  };
+
   return (
     <main style={{ margin: "0 5rem" }}>
       <Header />
-      <UserList users={users} setShowNewUserForm={setShowNewUserForm} />
+      <UserList
+        users={users}
+        setShowNewUserForm={setShowNewUserForm}
+        deleteUserHandler={handleUserDeletion}
+      />
       {showNewUserForm ? (
         <NewUserForm setShowNewUserForm={setShowNewUserForm} />
       ) : (

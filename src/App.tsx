@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 import { Header } from "./components/Header";
 import { NewUserForm } from "./components/NewUserForm";
-import { UserList } from "./components/userList/UserList";
+import { UserList } from "./components/user_list/UserList";
 import { AddUserButton } from "./components/AddUserFormButton";
 import { userReducer } from "./reducers/userList";
 

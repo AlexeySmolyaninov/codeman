@@ -5,13 +5,20 @@ import { UserDetails } from "./UserDetails";
 
 interface TableBodyProps {
   users: User[];
+  deleteUserHandler: (id: number) => void;
 }
 
-export const TableBody = ({ users }: TableBodyProps) => {
+export const TableBody = ({ users, deleteUserHandler }: TableBodyProps) => {
   return (
     <tbody>
       {users.map((user) => {
-        return <TableRow key={user.id} user={user} />;
+        return (
+          <TableRow
+            key={user.id}
+            user={user}
+            deleteUserHandler={deleteUserHandler}
+          />
+        );
       })}
     </tbody>
   );
@@ -19,9 +26,10 @@ export const TableBody = ({ users }: TableBodyProps) => {
 
 interface TableRowProps {
   user: User;
+  deleteUserHandler: (id: number) => void;
 }
 
-const TableRow = ({ user }: TableRowProps) => {
+const TableRow = ({ user, deleteUserHandler }: TableRowProps) => {
   const [showExpandedUserInformation, setShowExpandedUserInformation] =
     useState(false);
 
@@ -34,6 +42,7 @@ const TableRow = ({ user }: TableRowProps) => {
         key={user.id}
         user={user}
         setShowExpandedUserInformation={setShowExpandedUserInformation}
+        deleteUserHandler={deleteUserHandler}
       />
     );
   }

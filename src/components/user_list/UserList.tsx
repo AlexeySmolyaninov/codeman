@@ -10,7 +10,7 @@ interface UserListProps {
   deleteUserHandler: (id: number) => void;
 }
 
-export const UserList = ({ users }: UserListProps) => {
+export const UserList = ({ users, deleteUserHandler }: UserListProps) => {
   return (
     <section
       className={sharedStyles.container_centered}
@@ -22,7 +22,7 @@ export const UserList = ({ users }: UserListProps) => {
     >
       <table className={userListStyles.user_list}>
         <TableHead />
-        <TableBody users={users} />
+        <TableBody users={users} deleteUserHandler={deleteUserHandler} />
       </table>
     </section>
   );

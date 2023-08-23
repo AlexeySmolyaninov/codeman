@@ -5,11 +5,13 @@ import sharedStyles from "../../sharedStyles.module.css";
 interface UserDaitlsProps {
   user: User;
   setShowExpandedUserInformation: (show: boolean) => void;
+  deleteUserHandler: (id: number) => void;
 }
 
 export const UserDetails = ({
   user,
   setShowExpandedUserInformation,
+  deleteUserHandler,
 }: UserDaitlsProps) => {
   const closeDropDownHandler = () => setShowExpandedUserInformation(false);
   return (
@@ -69,6 +71,7 @@ export const UserDetails = ({
               </ul>
             </div>
           </div>
+          <button onClick={() => deleteUserHandler(user.id)}>Delete</button>
         </div>
       </td>
     </tr>

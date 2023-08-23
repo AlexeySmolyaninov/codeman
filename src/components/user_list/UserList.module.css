@@ -64,3 +64,18 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
 }
+
+.delete_user_button {
+  align-self: end;
+  background-color: #ffc9c9;
+  color: #e03131;
+
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+}
+
+.delete_user_button:hover {
+  background-color: #ffa8a8;
+}

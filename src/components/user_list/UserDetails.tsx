@@ -71,7 +71,12 @@ export const UserDetails = ({
               </ul>
             </div>
           </div>
-          <button onClick={() => deleteUserHandler(user.id)}>Delete</button>
+          <button
+            className={userListStyles.delete_user_button}
+            onClick={() => deleteUserHandler(user.id)}
+          >
+            Delete
+          </button>
         </div>
       </td>
     </tr>

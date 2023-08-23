@@ -2,6 +2,7 @@ import { useState } from "react";
 import { User } from "../../App";
 import userListStyles from "./UserList.module.css";
 import { UserDetails } from "./UserDetails";
+import { parseEmail } from "../../utils";
 
 interface TableBodyProps {
   users: User[];
@@ -49,9 +50,9 @@ const TableRow = ({ user, deleteUserHandler }: TableRowProps) => {
   return (
     <tr>
       <td className={userListStyles.user_list_td}>{user.name}</td>
-      <td className={userListStyles.user_list_td}>{user.email}</td>
+      <td className={userListStyles.user_list_td}>{parseEmail(user.email)}</td>
       <td className={userListStyles.user_list_td}>
-        {user.address.street}, {user.address.city}
+        {user.address.street}, {user.address.city}, {user.address.zipcode}
       </td>
       <td className={userListStyles.user_list_td}>{user.phone}</td>
       <td className={userListStyles.user_list_td}>{user.website}</td>

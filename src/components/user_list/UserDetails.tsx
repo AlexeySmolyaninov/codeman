@@ -1,6 +1,7 @@
 import { User } from "../../App";
 import userListStyles from "./UserList.module.css";
 import sharedStyles from "../../sharedStyles.module.css";
+import { parseEmail } from "../../utils";
 
 interface UserDaitlsProps {
   user: User;
@@ -47,7 +48,7 @@ export const UserDetails = ({
               <ul className={userListStyles.section_list}>
                 <li>Name: {user.name}</li>
                 <li>Username: {user.username}</li>
-                <li>Email: {user.email}</li>
+                <li>Email: {parseEmail(user.email)}</li>
                 <li>Phone: {user.phone}</li>
               </ul>
             </div>

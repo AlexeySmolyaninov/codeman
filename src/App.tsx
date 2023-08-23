@@ -273,6 +273,13 @@ export const App = () => {
     });
   };
 
+  const handleCreationOfUser = (user: User) => {
+    dispatch({
+      type: "ADD",
+      data: user,
+    });
+  };
+
   return (
     <main style={{ margin: "0 5rem" }}>
       <Header />
@@ -282,7 +289,10 @@ export const App = () => {
         deleteUserHandler={handleUserDeletion}
       />
       {showNewUserForm ? (
-        <NewUserForm setShowNewUserForm={setShowNewUserForm} />
+        <NewUserForm
+          setShowNewUserForm={setShowNewUserForm}
+          handleCreationOfUser={handleCreationOfUser}
+        />
       ) : (
         <AddUserButton setShowNewUserForm={setShowNewUserForm} />
       )}

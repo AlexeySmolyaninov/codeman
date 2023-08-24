@@ -18,7 +18,7 @@ type SetUserAction = {
 export const userReducer = (
   state: User[],
   action: AddUserAction | DeleteUserAction | SetUserAction
-) => {
+): User[] => {
   switch (action.type) {
     case "SET":
       return action.data;

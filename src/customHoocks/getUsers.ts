@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 
+export type GeneralInfo = {
+  name: string;
+  username: string;
+  email: string;
+  phone: string;
+  website: string;
+};
+
 export type Address = {
   street: string;
   suite: string;
@@ -17,13 +25,8 @@ export type Company = {
   bs: string;
 };
 
-export type User = {
+export type User = GeneralInfo & {
   id: number;
-  name: string;
-  username: string;
-  email: string;
-  phone: string;
-  website: string;
   address: Address;
   company: Company;
 };

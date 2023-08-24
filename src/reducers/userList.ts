@@ -1,4 +1,4 @@
-import { User } from "../App";
+import { User } from "../customHoocks/getUsers";
 
 type AddUserAction = {
   type: "ADD";
@@ -10,11 +10,18 @@ type DeleteUserAction = {
   data: { id: number };
 };
 
+type SetUserAction = {
+  type: "SET";
+  data: User[];
+};
+
 export const userReducer = (
   state: User[],
-  action: AddUserAction | DeleteUserAction
+  action: AddUserAction | DeleteUserAction | SetUserAction
 ) => {
   switch (action.type) {
+    case "SET":
+      return action.data;
     case "ADD":
       return [...state, action.data];
     case "DELETE":

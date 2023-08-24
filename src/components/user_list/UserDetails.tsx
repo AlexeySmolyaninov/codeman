@@ -1,7 +1,7 @@
-import { User } from "../../App";
 import userListStyles from "./UserList.module.css";
 import sharedStyles from "../../sharedStyles.module.css";
 import { parseEmail } from "../../utils";
+import { User } from "../../customHoocks/getUsers";
 
 interface UserDaitlsProps {
   user: User;

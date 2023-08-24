@@ -1,7 +1,7 @@
 import newUserFormStyles from "./NewUserForm.module.css";
 import sharedStyles from "../sharedStyles.module.css";
 import { FormEvent, useState } from "react";
-import { User } from "../App";
+import { User } from "../customHoocks/getUsers";
 
 interface NewUserFormProps {
   setShowNewUserForm: (value: boolean) => void;

@@ -1,8 +1,8 @@
-import { User } from "../../App";
 import userListStyles from "./UserList.module.css";
 import sharedStyles from "../../sharedStyles.module.css";
 import { TableBody } from "./TableBody";
 import { TableHead } from "./TableHead";
+import { User } from "../../customHoocks/getUsers";
 
 interface UserListProps {
   users: User[];

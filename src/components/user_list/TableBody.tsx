@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { User } from "../../App";
 import userListStyles from "./UserList.module.css";
 import { UserDetails } from "./UserDetails";
 import { parseEmail } from "../../utils";
+import { User } from "../../customHoocks/getUsers";
 
 interface TableBodyProps {
   users: User[];

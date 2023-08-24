@@ -11,8 +11,7 @@ export const UserPannel = () => {
     <main style={{ margin: "0 5rem" }}>
       <Header />
       <UserList />
-      {!showNewUserForm && <AddUserButton />}
-      {showNewUserForm && <NewUserForm />}
+      {showNewUserForm ? <NewUserForm /> : <AddUserButton />}
     </main>
   );
 };

@@ -16,9 +16,13 @@ type UserPanelContextType = {
   handleCreationOfUser: (user: User) => void;
 };
 
-export const UserPannelContext = createContext<UserPanelContextType>(
-  {} as UserPanelContextType
-);
+export const UserPannelContext = createContext<UserPanelContextType>({
+  users: [],
+  showNewUserForm: false,
+  setShowNewUserForm: () => {},
+  handleUserDeletion: () => {},
+  handleCreationOfUser: () => {},
+});
 
 export const UserPannelProvider = ({ children }: PropsWithChildren) => {
   const [showNewUserForm, setShowNewUserForm] = useState(false);

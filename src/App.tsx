@@ -11,13 +11,6 @@ export const App = () => {
   const { users: usersFetched } = useGetUsers();
   const [users, dispatch] = useReducer(userReducer, []);
 
-  useEffect(() => {
-    dispatch({
-      type: "SET",
-      data: usersFetched,
-    });
-  }, [usersFetched]);
-
   const handleUserDeletion = (id: number) => {
     dispatch({
       type: "DELETE",
@@ -31,6 +24,17 @@ export const App = () => {
       data: user,
     });
   };
+
+  const handleSetUsers = (usersFetched: User[]) => {
+    dispatch({
+      type: "SET",
+      data: usersFetched,
+    });
+  };
+
+  useEffect(() => {
+    handleSetUsers(usersFetched);
+  }, [usersFetched]);
 
   return (
     <main style={{ margin: "0 5rem" }}>

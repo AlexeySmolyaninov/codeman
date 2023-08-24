@@ -75,6 +75,7 @@ export const NewUserForm = () => {
             type="text"
             id="name"
             placeholder="Full Name"
+            name="full_name"
             required
             value={fullName}
             onChange={(event) => setFullName(event.target.value)}
@@ -84,6 +85,7 @@ export const NewUserForm = () => {
             type="text"
             id="username"
             placeholder="Username"
+            name="username"
             required
             value={username}
             onChange={(event) => setUsername(event.target.value)}
@@ -93,6 +95,7 @@ export const NewUserForm = () => {
             type="email"
             id="email"
             placeholder="Email"
+            name="email"
             required
             value={email}
             onChange={(event) => setEmail(event.target.value)}
@@ -102,6 +105,7 @@ export const NewUserForm = () => {
             type="text"
             id="phone"
             placeholder="Phone"
+            name="phone"
             required
             value={phone}
             onChange={(event) => setPhone(event.target.value)}
@@ -111,6 +115,7 @@ export const NewUserForm = () => {
             type="text"
             id="website"
             placeholder="Website"
+            name="website"
             required
             value={website}
             onChange={(event) => setWebsite(event.target.value)}
@@ -122,6 +127,7 @@ export const NewUserForm = () => {
             type="text"
             id="street"
             placeholder="Street"
+            name="street"
             required
             value={street}
             onChange={(event) => setStreet(event.target.value)}
@@ -131,6 +137,7 @@ export const NewUserForm = () => {
             type="text"
             id="suite"
             placeholder="Suite"
+            name="suite"
             required
             value={suite}
             onChange={(event) => setSuite(event.target.value)}
@@ -140,6 +147,7 @@ export const NewUserForm = () => {
             type="text"
             id="city"
             placeholder="City"
+            name="city"
             required
             value={city}
             onChange={(event) => setCity(event.target.value)}
@@ -149,6 +157,7 @@ export const NewUserForm = () => {
             type="text"
             id="zipcode"
             placeholder="Zipcode"
+            name="zipcode"
             required
             value={zipcode}
             onChange={(event) => setZipcode(event.target.value)}
@@ -159,6 +168,7 @@ export const NewUserForm = () => {
               <input
                 type="number"
                 id="lat"
+                name="lat"
                 required
                 value={latitude}
                 onChange={(event) => setLatitude(event.target.value)}
@@ -169,6 +179,7 @@ export const NewUserForm = () => {
               <input
                 type="number"
                 id="lng"
+                name="lng"
                 required
                 value={longtitude}
                 onChange={(event) => setLongtitude(event.target.value)}
@@ -182,6 +193,7 @@ export const NewUserForm = () => {
             type="text"
             id="name"
             placeholder="Name"
+            name="company_name"
             required
             value={companyName}
             onChange={(event) => setCompanyName(event.target.value)}
@@ -191,6 +203,7 @@ export const NewUserForm = () => {
             type="text"
             id="catch_phrase"
             placeholder="Catch Phrase"
+            name="catch_phrase"
             required
             value={catchPhrase}
             onChange={(event) => setCatchPhrase(event.target.value)}
@@ -200,6 +213,7 @@ export const NewUserForm = () => {
             type="text"
             id="bs"
             placeholder="Bs"
+            name="bs"
             required
             value={bs}
             onChange={(event) => setBs(event.target.value)}

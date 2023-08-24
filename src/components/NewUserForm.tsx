@@ -3,6 +3,7 @@ import sharedStyles from "../sharedStyles.module.css";
 import { FormEvent, useContext, useState } from "react";
 import { User } from "../customHoocks/getUsers";
 import { UserPannelContext } from "../contexts/UserPannelContextProvider";
+import { CloseFormIcon } from "../general_ui_components/icons/CloseFormIcon";
 
 export const NewUserForm = () => {
   const { setShowNewUserForm, handleCreationOfUser } =
@@ -60,20 +61,7 @@ export const NewUserForm = () => {
         onClick={closeFormHandler}
         className={`${newUserFormStyles.close_button} ${sharedStyles.flex_align_justify_center}`}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className={newUserFormStyles.close_svg}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
+        <CloseFormIcon />
       </button>
       <h2>New User</h2>
       <form

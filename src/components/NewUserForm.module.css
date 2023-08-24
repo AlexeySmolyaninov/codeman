@@ -33,10 +33,6 @@
   background-color: #fff;
 }
 
-.close_svg:hover {
-  stroke-width: 0.2rem;
-}
-
 .form {
   display: flex;
   margin-bottom: 3.2rem;

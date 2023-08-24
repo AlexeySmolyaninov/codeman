@@ -20,24 +20,6 @@
   padding: 1.2rem 2rem;
 }
 
-.user_list_chevron_down_icon {
-  width: 2rem;
-  cursor: pointer;
-}
-
-.user_list_chevron_down_icon:hover {
-  stroke-width: 0.2rem;
-}
-
-.user_list_chevron_up {
-  width: 2rem;
-  cursor: pointer;
-}
-
-.user_list_chevron_up:hover {
-  stroke-width: 0.2rem;
-}
-
 .user_detail_section {
   display: flex;
   flex-direction: column;

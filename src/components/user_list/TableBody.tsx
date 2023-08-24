@@ -3,6 +3,7 @@ import userListStyles from "./UserList.module.css";
 import { UserDetails } from "./UserDetails";
 import { parseEmail } from "../../utils";
 import { User } from "../../customHoocks/getUsers";
+import { ChevronDownIcon } from "../../general_ui_components/icons/ChevronDownIcon";
 
 interface TableBodyProps {
   users: User[];
@@ -61,19 +62,7 @@ const TableRow = ({ user, deleteUserHandler }: TableRowProps) => {
           onClick={onChevronClickHandler}
           className={userListStyles.button}
         >
-          <svg
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className={userListStyles.user_list_chevron_down_icon}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
+          <ChevronDownIcon />
         </button>
       </td>
     </tr>

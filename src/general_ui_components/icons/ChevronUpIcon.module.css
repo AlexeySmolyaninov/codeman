@@ -1,0 +1,8 @@
+.user_list_chevron_up {
+  width: 2rem;
+  cursor: pointer;
+}
+
+.user_list_chevron_up:hover {
+  stroke-width: 0.2rem;
+}

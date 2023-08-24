@@ -2,15 +2,17 @@ import userListStyles from "./UserList.module.css";
 import sharedStyles from "../../sharedStyles.module.css";
 import { TableBody } from "./TableBody";
 import { TableHead } from "./TableHead";
-import { User } from "../../customHoocks/getUsers";
+import { useContext } from "react";
+import { UserPannelContext } from "../../contexts/UserPannelContextProvider";
 
-interface UserListProps {
-  users: User[];
-  setShowNewUserForm: (value: boolean) => void;
-  deleteUserHandler: (id: number) => void;
-}
+// interface UserListProps {
+//   users: User[];
+//   setShowNewUserForm: (value: boolean) => void;
+//   deleteUserHandler: (id: number) => void;
+// }
 
-export const UserList = ({ users, deleteUserHandler }: UserListProps) => {
+export const UserList = () => {
+  const { users, handleUserDeletion } = useContext(UserPannelContext);
   return (
     <section
       className={sharedStyles.container_centered}
@@ -22,7 +24,7 @@ export const UserList = ({ users, deleteUserHandler }: UserListProps) => {
     >
       <table className={userListStyles.user_list}>
         <TableHead />
-        <TableBody users={users} deleteUserHandler={deleteUserHandler} />
+        <TableBody users={users} deleteUserHandler={handleUserDeletion} />
       </table>
     </section>
   );

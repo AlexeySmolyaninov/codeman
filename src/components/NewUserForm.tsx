@@ -1,18 +1,12 @@
 import newUserFormStyles from "./NewUserForm.module.css";
 import sharedStyles from "../sharedStyles.module.css";
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
 import { User } from "../customHoocks/getUsers";
+import { UserPannelContext } from "../contexts/UserPannelContextProvider";
 
-interface NewUserFormProps {
-  setShowNewUserForm: (value: boolean) => void;
-  handleCreationOfUser: (user: User) => void;
-}
-
-export const NewUserForm = ({
-  setShowNewUserForm,
-  handleCreationOfUser,
-}: NewUserFormProps) => {
-  const closeFormHandler = () => setShowNewUserForm(false);
+export const NewUserForm = () => {
+  const { setShowNewUserForm, handleCreationOfUser } =
+    useContext(UserPannelContext);
   const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -29,6 +23,8 @@ export const NewUserForm = ({
   const [companyName, setCompanyName] = useState("");
   const [catchPhrase, setCatchPhrase] = useState("");
   const [bs, setBs] = useState("");
+
+  const closeFormHandler = () => setShowNewUserForm(false);
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();

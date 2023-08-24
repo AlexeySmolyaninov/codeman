@@ -1,11 +1,11 @@
 import addUserButtonStyles from "./AddUserButton.module.css";
 import sharedStyles from "../sharedStyles.module.css";
+import { useContext } from "react";
+import { UserPannelContext } from "../contexts/UserPannelContextProvider";
 
-interface AddUserButtonProps {
-  setShowNewUserForm: (value: boolean) => void;
-}
+export const AddUserButton = () => {
+  const { setShowNewUserForm } = useContext(UserPannelContext);
 
-export const AddUserButton = ({ setShowNewUserForm }: AddUserButtonProps) => {
   const clickHandler = () => setShowNewUserForm(true);
   return (
     <div className={sharedStyles.container_flex_end}>

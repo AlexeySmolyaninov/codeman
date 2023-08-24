@@ -28,6 +28,8 @@ export type User = {
   company: Company;
 };
 
+const USERS_PATH = "https://jsonplaceholder.typicode.com/users";
+
 export const useGetUsers = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -37,16 +39,10 @@ export const useGetUsers = () => {
   useEffect(() => {
     const getUsers = async () => {
       try {
-        await fetch("https://jsonplaceholder.typicode.com/users").then(
-          async (response) => {
-            if (!response.ok) {
-              throw new Error(`Status ${response.status}`);
-            }
-            const data = (await response.json()) as User[];
-            setUsers(data);
-            setIsError(false);
-          }
-        );
+        const response = await fetch(USERS_PATH);
+        const data = (await response.json()) as User[];
+        setUsers(data);
+        setIsError(false);
       } catch (error) {
         setIsError(true);
         if (error instanceof Error) {

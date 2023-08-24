@@ -2,7 +2,7 @@ import newUserFormStyles from "./NewUserForm.module.css";
 import sharedStyles from "../sharedStyles.module.css";
 import { FormEvent, useContext, useState } from "react";
 import { User } from "../customHoocks/getUsers";
-import { UserPannelContext } from "../contexts/UserPannelContextProvider";
+import { UserPannelContext } from "../contexts/UserPanelContextProvider";
 import { CloseFormIcon } from "../general_ui_components/icons/CloseFormIcon";
 
 export const NewUserForm = () => {

@@ -3,7 +3,7 @@ import { AddUserButton } from "./AddUserFormButton";
 import { Header } from "./Header";
 import { NewUserForm } from "./NewUserForm";
 import { UserList } from "./user_list/UserList";
-import { UserPannelContext } from "../contexts/UserPannelContextProvider";
+import { UserPannelContext } from "../contexts/UserPanelContextProvider";
 
 export const UserPannel = () => {
   const { showNewUserForm } = useContext(UserPannelContext);

@@ -3,7 +3,7 @@ import sharedStyles from "../../sharedStyles.module.css";
 import { TableBody } from "./TableBody";
 import { TableHead } from "./TableHead";
 import { useContext } from "react";
-import { UserPannelContext } from "../../contexts/UserPannelContextProvider";
+import { UserPannelContext } from "../../contexts/UserPanelContextProvider";
 
 // interface UserListProps {
 //   users: User[];

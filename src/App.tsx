@@ -1,5 +1,5 @@
-import { UserPannel } from "./components/UserPannel";
-import { UserPannelProvider } from "./contexts/UserPannelContextProvider";
+import { UserPannel } from "./components/UserPanel";
+import { UserPannelProvider } from "./contexts/UserPanelContextProvider";
 
 export const App = () => {
   return (

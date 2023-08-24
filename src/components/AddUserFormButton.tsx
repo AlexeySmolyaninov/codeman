@@ -1,7 +1,7 @@
 import addUserButtonStyles from "./AddUserButton.module.css";
 import sharedStyles from "../sharedStyles.module.css";
 import { useContext } from "react";
-import { UserPannelContext } from "../contexts/UserPannelContextProvider";
+import { UserPannelContext } from "../contexts/UserPanelContextProvider";
 import { AddUserIcon } from "../general_ui_components/icons/AddUserIcon";
 
 export const AddUserButton = () => {

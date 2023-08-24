@@ -8,7 +8,7 @@ import {
 import { User, useGetUsers } from "../customHoocks/getUsers";
 import { userReducer } from "../reducers/userList";
 
-type UserPannelContextType = {
+type UserPanelContextType = {
   users: User[];
   showNewUserForm: boolean;
   setShowNewUserForm: (value: boolean) => void;
@@ -16,8 +16,8 @@ type UserPannelContextType = {
   handleCreationOfUser: (user: User) => void;
 };
 
-export const UserPannelContext = createContext<UserPannelContextType>(
-  {} as UserPannelContextType
+export const UserPannelContext = createContext<UserPanelContextType>(
+  {} as UserPanelContextType
 );
 
 export const UserPannelProvider = ({ children }: PropsWithChildren) => {

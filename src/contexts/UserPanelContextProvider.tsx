@@ -32,7 +32,7 @@ export const UserPannelProvider = ({ children }: PropsWithChildren) => {
   const handleUserDeletion = (id: number) => {
     dispatch({
       type: "DELETE",
-      data: { id },
+      data: id,
     });
   };
 

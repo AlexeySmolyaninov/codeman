@@ -7,7 +7,7 @@ type AddUserAction = {
 
 type DeleteUserAction = {
   type: "DELETE";
-  data: { id: number };
+  data: number;
 };
 
 type SetUserAction = {
@@ -25,6 +25,6 @@ export const userReducer = (
     case "ADD":
       return [...state, action.data];
     case "DELETE":
-      return state.filter((user) => user.id !== action.data.id);
+      return state.filter((user) => user.id !== action.data);
   }
 };
